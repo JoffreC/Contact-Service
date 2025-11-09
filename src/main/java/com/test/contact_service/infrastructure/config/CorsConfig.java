@@ -1,10 +1,11 @@
-package com.test.company_service.infrastructure.config;
+package com.test.contact_service.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+// Cors Configuration
 @Configuration
 public class CorsConfig {
     @Bean
@@ -12,11 +13,11 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // permite todos los endpoints
-                        .allowedOrigins("http://localhost:4200") // tu frontend
+                registry.addMapping("/**")
+                        .allowedOrigins("http://localhost:4200")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .allowCredentials(true); // si usas cookies o autenticación
+                        .allowCredentials(true);
             }
         };
     }

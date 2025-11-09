@@ -1,8 +1,9 @@
 package com.test.contact_service.domain.ports.out;
 
-import com.test.contact_service.domain.models.CompanyInformation;
+import com.test.contact_service.domain.models.ContactCompany;
 
-public interface CompanyInformationRepositoryPort {
-    CompanyInformation getCompanyInformation(Long companyId);
-    Boolean validateCompanyInformation(Long companyId);
+// External information port
+public interface ContactCompanyRepositoryPort {
+    ContactCompany get(Long companyId);
+    void validate(Long companyId);
 }

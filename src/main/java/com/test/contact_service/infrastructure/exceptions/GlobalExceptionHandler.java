@@ -1,6 +1,6 @@
-package com.test.company_service.infrastructure.exceptions;
+package com.test.contact_service.infrastructure.exceptions;
 
-import com.test.company_service.infrastructure.dto.response.ErrorResponse;
+import com.test.contact_service.infrastructure.dto.response.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
+// Global exception manager
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {

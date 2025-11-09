@@ -3,9 +3,10 @@ package com.test.contact_service.domain.models;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
+// Domain model
 @Data
 @Builder
 public class Contact {
@@ -14,7 +15,7 @@ public class Contact {
     private String middleName;
     private String lastName;
     private String nickname;
-    private Date birthday;
+    private LocalDate birthday;
     private Gender gender;
     private Boolean isActive;
     private Long companyId;

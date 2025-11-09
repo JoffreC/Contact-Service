@@ -1,4 +1,4 @@
-package com.test.company_service.infrastructure.dto.response;
+package com.test.contact_service.infrastructure.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

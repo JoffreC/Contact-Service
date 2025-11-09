@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Data
 @Builder
-public class ContactResponse {
+public class ContactWithCompanyResponse {
     private UUID id;
     private String firstName;
     private String middleName;
@@ -20,11 +20,10 @@ public class ContactResponse {
     private LocalDate birthday;
     private Gender gender;
     private Boolean isActive;
-    private Long companyId;
     private ContactCompany contactCompany;
 
-    public static ContactResponse fromModel(Contact contact) {
-        return ContactResponse.builder()
+    public static ContactWithCompanyResponse fromModel(Contact contact) {
+        return ContactWithCompanyResponse.builder()
                 .id(contact.getId())
                 .firstName(contact.getFirstName())
                 .middleName(contact.getMiddleName())
@@ -33,7 +32,6 @@ public class ContactResponse {
                 .birthday(contact.getBirthday())
                 .gender(contact.getGender())
                 .isActive(contact.getIsActive())
-                .companyId(contact.getCompanyId())
                 .build();
     }
 }

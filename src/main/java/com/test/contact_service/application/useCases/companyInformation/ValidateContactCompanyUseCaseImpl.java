@@ -1,16 +1,16 @@
 package com.test.contact_service.application.useCases.companyInformation;
 
-import com.test.contact_service.domain.ports.in.companyInformation.ValidateCompanyInformationUseCase;
-import com.test.contact_service.domain.ports.out.CompanyInformationRepositoryPort;
+import com.test.contact_service.domain.ports.in.companyInformation.ValidateContactCompanyUseCase;
+import com.test.contact_service.domain.ports.out.ContactCompanyRepositoryPort;
 import lombok.RequiredArgsConstructor;
 
+// Implementation
 @RequiredArgsConstructor
-public class ValidateCompanyInformationUseCaseImpl implements ValidateCompanyInformationUseCase {
+public class ValidateContactCompanyUseCaseImpl implements ValidateContactCompanyUseCase {
 
-    private final CompanyInformationRepositoryPort companyInformationRepositoryPort;
+    private final ContactCompanyRepositoryPort contactCompanyRepositoryPort;
 
     @Override
-    public Boolean validate(Long companyId) {
-        return companyInformationRepositoryPort.validateCompanyInformation(companyId);
+    public void validate(Long companyId) {contactCompanyRepositoryPort.validate(companyId);
     }
 }

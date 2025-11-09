@@ -13,9 +13,10 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 public class JpaContactRepositoryAdapter implements ContactRepositoryPort {
-
+    // Inject Repository
     private final JpaContactRepository jpaContactRepository;
 
+    // Contact port use cases implementation
     @Override
     public Contact create(Contact contact) {
         ContactEntity contactEntity = ContactEntity.fromModel(contact);
@@ -64,6 +65,7 @@ public class JpaContactRepositoryAdapter implements ContactRepositoryPort {
         contactEntity.setLastName(contact.getLastName());
         contactEntity.setNickname(contact.getNickname());
         contactEntity.setBirthday(contact.getBirthday());
+        contactEntity.setGender(contact.getGender());
         contactEntity.setIsActive(contact.getIsActive());
         contactEntity.setCompanyId(contactEntity.getCompanyId());
         return contactEntity;

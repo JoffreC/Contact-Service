@@ -1,13 +1,14 @@
-package com.test.contact_service.application.useCases;
+package com.test.contact_service.application.useCases.contact;
 
 import com.test.contact_service.domain.models.Contact;
-import com.test.contact_service.domain.ports.in.RetrieveContactUseCase;
+import com.test.contact_service.domain.ports.in.contact.RetrieveContactUseCase;
 import com.test.contact_service.domain.ports.out.ContactRepositoryPort;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
 
+// Implementation
 @RequiredArgsConstructor
 public class RetrieveContactUseCaseImpl implements RetrieveContactUseCase {
 

@@ -1,17 +1,18 @@
 package com.test.contact_service.application.useCases.companyInformation;
 
-import com.test.contact_service.domain.models.CompanyInformation;
-import com.test.contact_service.domain.ports.in.companyInformation.GetCompanyInformationUseCase;
-import com.test.contact_service.domain.ports.out.CompanyInformationRepositoryPort;
+import com.test.contact_service.domain.models.ContactCompany;
+import com.test.contact_service.domain.ports.in.companyInformation.GetContactCompanyUseCase;
+import com.test.contact_service.domain.ports.out.ContactCompanyRepositoryPort;
 import lombok.RequiredArgsConstructor;
 
+// Implementation
 @RequiredArgsConstructor
-public class GetCompanyInformationUseCaseImpl implements GetCompanyInformationUseCase {
+public class GetContactCompanyUseCaseImpl implements GetContactCompanyUseCase {
 
-    private final CompanyInformationRepositoryPort companyInformationRepositoryPort;
+    private final ContactCompanyRepositoryPort contactCompanyRepositoryPort;
 
     @Override
-    public CompanyInformation get(Long companyId) {
-        return companyInformationRepositoryPort.getCompanyInformation(companyId);
+    public ContactCompany get(Long companyId) {
+        return contactCompanyRepositoryPort.get(companyId);
     }
 }

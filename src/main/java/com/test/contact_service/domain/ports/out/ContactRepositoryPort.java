@@ -5,6 +5,7 @@ import com.test.contact_service.domain.models.Contact;
 import java.util.List;
 import java.util.UUID;
 
+// Contact port
 public interface ContactRepositoryPort {
     Contact create(Contact contact);
 

@@ -1,6 +1,10 @@
 package com.test.contact_service.domain.models;
 
-public class CompanyInformation {
+import lombok.Data;
+
+// Domain model for information of the external service Company-Service
+@Data
+public class ContactCompany {
     private Long id;
     private String name;
     private String email;
